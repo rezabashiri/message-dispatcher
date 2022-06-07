@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Message.Dispatchers</title>
+    <link rel="stylesheet" href="~/css/style.min.css" asp-append-version="true" />
+
+    <partial name="_FaviconPartial" />
+</head>
+<body class="js no-touch t-login">
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col-6">
+            <div class="t-login-panel">
+                <h1>Hosted<br />Buyer<br />Message.Dispatchers</h1>
+            </div>
+        </div>
+        <div class="offset-1 col-4">
+            @*<partial name="_CookieConsentPartial" />*@
+            @RenderBody()
+        </div>
+    </div>
+</div>
+<environment include="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</environment>
+<environment exclude="Development">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+    </script>
+</environment>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>

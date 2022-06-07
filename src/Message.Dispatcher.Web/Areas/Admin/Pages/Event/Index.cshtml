@@ -1,0 +1,47 @@
+﻿@page 
+@model Message.Dispatcher.Web.Areas.Admin.Pages.Event.IndexModel
+@{
+    ViewData["Title"] = "Events";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row align-items-center mb-1">
+    <div class="col-6">
+        <h1>@ViewData["Title"]</h1>
+        <p>Check out coming events</p>
+    </div>
+
+</div>
+
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="wrapper">
+            <div class="table-header">
+                <h3>Events</h3>
+            </div>
+            @if (Model.Events != null)
+            {
+                    <table id="events" class="tabbed-table active">
+                        <thead>
+                            <tr>
+                                <th>Event Name<i class="d-hidden pull-right"></i></th>
+                                 <th>Type<i class="d-hidden pull-right"></i></th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var configuredEvent in Model.Events)
+                        {
+                                     <event-list-row event-data="@configuredEvent" ></event-list-row>
+                        }
+                        </tbody>
+                    </table>
+            }
+            else
+            {   
+                    <div class="alert-warning">
+                        The events couldn't be loaded.
+                    </div>
+            }
+        </div>
+    </div>
+</div>

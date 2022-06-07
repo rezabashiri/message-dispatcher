@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+ 
+  message.dispatcher.db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: Hangfire
+
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  api.faker.minimalapi:
+    image: ${DOCKER_REGISTRY-}apifakerminimalapi
+    build:
+      context: .
+      dockerfile: src/Api.Faker/Api.Faker.MinimalApi/Dockerfile
+
+
+  message.dispatcher.web:
+    image: ${DOCKER_REGISTRY-}messagedispatcherweb
+    build:
+      context: .
+      dockerfile: src/Message.Dispatcher.Web/Dockerfile
+    depends_on: 
+      - message.dispatcher.db
+

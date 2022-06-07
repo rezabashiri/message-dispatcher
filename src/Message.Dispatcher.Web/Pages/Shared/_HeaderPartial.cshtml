@@ -1,0 +1,13 @@
+﻿@using System.Security.Claims
+@using Message.Dispatcher.Web.Extensions
+
+
+<div class="header no-print">
+    @{
+        string dynamicReturnUrl = Context.Request.Path + "?" + Context.Request.QueryString;
+    }
+    <div>
+        <span>List of events </span>
+    </div>
+
+</div>
