@@ -31,5 +31,6 @@ services:
       context: .
       dockerfile: src/Message.Dispatcher.Web/Dockerfile
     depends_on: 
+      - api.faker.minimalapi
       - message.dispatcher.db
 
