@@ -1,28 +1,13 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-<br />
 <div align="center">
   <a href="https://github.com/rezabashiri/message-dispatcher">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Message dispatcher template</h3>
 
   <p align="center">
     An easy to use template to show how to develop a message dispatcher by .net 6
-    <br />
-    <a href="https://github.com/rezabashiri/message-dispatcher"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/rezabashiri/message-dispatcher">View Demo</a>
-    ·
     <a href="https://github.com/rezabashiri/message-dispatcher/issues">Report Bug</a>
     ·
     <a href="https://github.com/rezabashiri/message-dispatcher/issues">Request Feature</a>
@@ -108,7 +93,7 @@ _Below is how you can run your project via docker compose._
    ```sh
    docker compose up -d
    ```
-3. [Head to](https://localhost:9001)
+3. [Head to https://localhost:9001](https://localhost:9001)
 
 <strong>To run integration tests succefully, you need to run project by visual studio through docker compose and then run integration tests (those tests are connecting to API faker project to fetch data</strong>
 
@@ -157,7 +142,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Reza Bashiri - [https://rezabashiri.com/](https://rezabashiri.com/) - rzbashiri@gmail.com
+Reza Bashiri - [https://rezabashiri.com/](https://rezabashiri.com/) - rzbashiri@gmail.com - [Linkedin](https://www.linkedin.com/in/reza-bashiri/)
 
 Project Link: [https://github.com/rezabashiri/message-dispatcher](https://github.com/rezabashiri/message-dispatcher)
 
